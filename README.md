@@ -23,3 +23,19 @@ sudo add-apt-repository ppa:open5gs/latest
 sudo apt update
 sudo apt install open5gs
 
+## ## 📊 Simulation Results
+
+### 1. Core & RAN Connection
+The OCUDU gNB successfully establishes an NGAP connection with the Open5GS AMF:
+![AMF Connection](docs/amf_log_n2.png)
+![gNB NG Setup](docs/gnb_log_ngsetup.png)
+![gNB Ready](docs/gnb_log_f1_du_ready.png)
+![gNB on UE Attach](docs/gnb_log_ue_registered.png)
+
+### 2. UE Registration
+The srsUE successfully attaches to the network and is assigned an IP address:
+![UE Registered](docs/ue_log_attach_pdu.png)
+
+### 3. End-to-End Data Test
+A successful ping test through the `tun0` interface confirms the user plane is operational:
+![Ping Test](docs/ping_test.png)
